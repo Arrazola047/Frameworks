@@ -2,11 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'mi-componente',
-    template: `
-        <h1>{{titulo}}</h1>
-        <p>{{comentario}}</p>
-        <h2> Es el año {{year}}</h2>
-    `
+    templateUrl: './mi-componente.component.html' 
 }) // IMPORTANTE!!!!!!!!    Aqui no va punto y coma (;) por que el agregarlo va a traer problemas al funcionamiento del codigo
 
 export class MiComponente{
