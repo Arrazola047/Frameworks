@@ -24,4 +24,9 @@ export class PeliculasComponent implements OnInit {
   cambiarTitulo(){
     this.titulo = "Titulo de pelicula: Monster's Inc.";
   }
+
+  ngOnDestroy(){
+    console.log("El componente se va a eliminar");
+  }
+
 }

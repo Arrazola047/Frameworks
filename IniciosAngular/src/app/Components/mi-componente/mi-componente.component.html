@@ -4,5 +4,8 @@
 <p>{{comentario}}</p>
 <p>Soy otra linea</p>
 <hr>
-<app-peliculas></app-peliculas>
+<button (click)="ocultarPelicula()">Ocultar peliculas</button>
+<div *ngIf="mostrarPeliculas == true">
+    <app-peliculas></app-peliculas>
+</div>
 <pruebas></pruebas>
