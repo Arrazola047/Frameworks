@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  
+  public title: string;
 
+  constructor(){
+    this.title = "Ultimos Articulos"
+  }
 }

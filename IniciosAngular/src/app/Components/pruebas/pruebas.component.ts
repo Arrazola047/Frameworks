@@ -7,4 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PruebasComponent {
 
+  public title: string;
+
+  constructor(){
+    this.title = "Pruebas"
+  }
 }

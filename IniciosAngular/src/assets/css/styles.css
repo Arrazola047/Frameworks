@@ -90,10 +90,21 @@ body{
     transition: 300ms all;
 }
 
-#menu a:hover{
-    color: rgba(166,18,13,1);
+#menu a:hover, 
+.active{
+    color: rgba(166,18,13,1) !important;
 }
 
+.yearGreen{
+    
+    color:green ;
+}
+
+.yearRed{
+   
+    color: #dd1b16;
+    
+}
 
 #slider{
     width: 100%;
@@ -378,7 +389,7 @@ textarea{
     }
 }
 
-@media(max-width: 864px){
+@media(max-width: 906px){ /*antes 864px*/
     #logo{
         float: none;
         /*width: 240px;*/

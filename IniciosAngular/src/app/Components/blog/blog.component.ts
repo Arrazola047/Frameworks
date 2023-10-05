@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
 
+  public title: string;
+
+  constructor(){
+    this.title = "Blog"
+  }
 }

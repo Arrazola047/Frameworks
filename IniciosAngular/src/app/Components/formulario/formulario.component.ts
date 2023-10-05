@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class FormularioComponent {
 
+  public title: string;
+
+  constructor(){
+    this.title = "Formulario"
+  }
 }

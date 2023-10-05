@@ -1,1 +1,13 @@
-<p>pagina works!</p>
+<h1 class="subheader">{{title}}</h1>
+<div *ngIf="nombre && apellido; then SiHayParametros else NoHayParametros"></div>
+
+<ng-template #SiHayParametros>
+    <h2>El nombre es {{nombre}}</h2>
+    <h2>El apellido es {{apellido}}</h2>
+</ng-template>
+
+<ng-template #NoHayParametros>
+    <h2>No hay parametros por mostrar</h2>
+</ng-template>
+
+<button (click)="redireccion()">Nombre y Apellidos</button>
