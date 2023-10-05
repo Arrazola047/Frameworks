@@ -8,8 +8,10 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   
   public title: string;
+  public homeText = 'Bienvendio al curso de Angular';
 
   constructor(){
     this.title = "Ultimos Articulos"
+    
   }
 }

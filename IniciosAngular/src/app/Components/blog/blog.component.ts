@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-blog',
@@ -7,9 +7,12 @@ import { Component } from '@angular/core';
 })
 export class BlogComponent {
 
+  @Input() nombre: string;
+
   public title: string;
 
   constructor(){
-    this.title = "Blog"
+    this.title = "Blog",
+    this.nombre = ""
   }
 }
