@@ -15,6 +15,8 @@ import { BlogComponent } from './Components/blog/blog.component';
 import { FormularioComponent } from './Components/formulario/formulario.component';
 import { PaginaComponent } from './Components/pagina/pagina.component';
 import { ErrorComponent } from './Components/error/error.component';
+import { PeliculaComponent } from './Components/pelicula/pelicula.component';
+import { EsParPipe } from './pipes/espar.pipe';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ErrorComponent } from './Components/error/error.component';
     BlogComponent,
     FormularioComponent,
     PaginaComponent,
-    ErrorComponent
+    ErrorComponent,
+    PeliculaComponent,
+    EsParPipe
   ],
   imports: [
     BrowserModule,

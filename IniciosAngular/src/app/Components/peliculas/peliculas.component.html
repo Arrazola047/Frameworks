@@ -1,9 +1,15 @@
-<app-slider [nombre] = "'Peliculas'" ></app-slider>
+<app-slider [nombre] = "'Peliculas'" [size]="'small'"></app-slider>
 
 <div class="center">  
     <section id="content">
+        <div id="favorita" *ngIf="favorita">
+            <h2 class="subheader">Pelicula Favorita</h2>
+            <h4>{{favorita.title | uppercase}}</h4>
+            <h5>{{favorita.year | espar}}</h5>
+            <h5>{{fecha | date:'fullDate'}}</h5>
+        </div>
         <h1 class="subheader">{{title}}</h1>
-        <h2 class="subheader">{{subtitle}}</h2>
+        <!--<h2 class="subheader">{{subtitle}}</h2>
         <button (click)="cambiarTitulo()">Pulsame!</button>
         <hr>
 
@@ -19,26 +25,15 @@
         </div> <br><br>
         {{peliculas.length}}
         <hr>
-        <h2 class="subheader">Listado de peliculas</h2>
+        <h2 class="subheader">Listado de peliculas</h2> -->
         <!--Listado articulos -->
         <div id="articles" *ngIf="peliculas">
-            <article class="article-item" *ngFor="let pelicula of peliculas; let i = index;">
-                <div class="image-wrap">
-                    <img src={{pelicula.image}} alt="{{pelicula.title}}">
-                </div>
-                <h2>{{pelicula.title}}</h2>
-                <span class="date">
-                    Hace 5 minutos
-                </span>
-
-                <span class="year" [ngClass]="{
-                                        'yearGreen': pelicula.year > 2016, 
-                                        'yearRed' : pelicula.year < 2016 }">
-                    {{pelicula.year}}
-                </span>
-                <a href="article.html">Leer más</a>
-                <div class="clearfix"></div>
-            </article>
+            <div *ngFor="let pelicula of peliculas; let i = index;">
+                <app-pelicula 
+                    [pelicula]="pelicula"
+                    (MarcarFav)="mostrarFav($event)">
+                </app-pelicula>
+            </div>
         </div>
     </section>
     <app-sidebar></app-sidebar>
